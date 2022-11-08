@@ -1,5 +1,7 @@
 USE employees;
 
+# WHERE Clauses
+
 SELECT * FROM employees WHERE hire_date = '1985-01-01';
 
 SELECT first_name FROM employees WHERE first_name LIKE '%Tom%';
@@ -25,3 +27,11 @@ SELECT birth_date FROM employees
                     AND hire_date NOT LIKE '199%;';
 
 SELECT * FROM employees WHERE birth_date LIKE '%-01';
+
+# ORDER BY Clauses
+
+SELECT * FROM employees WHERE birth_date LIKE '1954-01-%' ORDER BY birth_date;
+
+SELECT * FROM employees WHERE birth_date LIKE '1954-01-%' ORDER BY birth_date DESC, last_name DESC;
+
+SELECT * FROM employees WHERE (first_name LIKE 'q%' OR first_name LIKE 'b%') AND hire_date LIKE '1988%' ORDER BY birth_date;
