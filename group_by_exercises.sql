@@ -26,3 +26,6 @@ SELECT COUNT(*), first_name FROM employees WHERE first_name IN ('Maya') GROUP BY
 
 SELECT COUNT(*) AS Count ,first_name, last_name FROM employees WHERE first_name = 'Maya' GROUP BY first_name, last_name ORDER BY Count DESC;
 
+SELECT COUNT(*) AS LastNAME, first_name, last_name FROM employees WHERE last_name = 'Luck' GROUP BY first_name ORDER BY LastNAME DESC;
+
+SELECT COUNT(*), last_name FROM employees WHERE last_name = 'Luck' GROUP BY last_name;
