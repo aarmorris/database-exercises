@@ -26,7 +26,7 @@ CREATE TABLE departments (
 INSERT INTO departments (dept_name) VALUES
                                         ('human resources'),
                                         ('finance'),
-                                        ('sales';
+                                        ('sales');
 
 CREATE TABLE employees (
                            emp_no INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -52,3 +52,5 @@ CREATE TABLE dept_emp (
 INSERT INTO dept_emp (dept_no, emp_no, from_date, to_date) VALUES
                                                                (1, 10001, '2008-01-01', '2011-12-31'),
                                                                (1, 10001, '2012-01-01', '9999-01-01');
+
+
