@@ -79,3 +79,7 @@ INSERT INTO quote_topics  (quote_id, topic_id) VALUES
                                                    (5, 4),
                                                    (6, 3),
                                                    (6, 4);
+
+SET @literature_id := (SELECT id FROM topics WHERE topic = 'Literature');
+
+SELECT content, author_name AS author FROM authors a JOIN quotes q ON a.id = q.author_id JOIN quote_topics qt on q.id = qt.quote_id WHERE qt.topic_id = @literature_id;
